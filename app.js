@@ -9,6 +9,36 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// DATABASE
+
+var mysql = require("mysql");
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "nodeDbExample"
+});
+con.connect(function(err) {
+  if (err) {
+    console.log("Error connecting to Db");
+    return;
+  }
+  console.log("Connection established");
+});
+
+//  CON ESTO CREAS LA BASE DE DATOS, TIENES QUE ABRIR LA RUTA localhost:3000/hola PARA EJECUTAR 
+// app.get("/hola", (req, res) => {
+
+//   let sql = 'CREATE DATABASE nodeDbExample';
+//   con.query(sql, (err, result) => {
+//     if(err) throw err;
+//     console.log(result);
+//     res.send('database created');
+
+//   })
+
+// });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
