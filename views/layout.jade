@@ -2,6 +2,21 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')    
+  nav
+    block navbar
   body
-    block content
+    header
+      h3 Mi sitio
+    .container
+        img
+       .main-content
+         block content
+        .sidebar
+          block sidebar
+    footer
+      p Fin de Mi pagina
+      span Copyright 
+
+
+    
