@@ -1,6 +1,6 @@
 # DatabaseSystemExample
 
-website example by using Express 
+website example by using Express & Pug
 
 
 # Folder Structure with Express
