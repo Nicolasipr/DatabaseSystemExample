@@ -1,4 +1,7 @@
 var express = require('express');
+
+app.use(express.static(path.join(__dirname, "public/images")));
+
 var router = express.Router();
 
 /* GET home page. */
