@@ -1,13 +1,31 @@
+nav {
+  background-color: rgb(36, 56, 52);
+  color: white;
+  text-align: center;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
- body .container {
-  background-image: "../images/paisaje1.jpg";
+
+body #id-fondo1{
+
   background-size: cover;
- }
+  width: auto;
+  height: 500px;
+}
+
+header  {
+
+}
+
+footer {
+
+}
 
 a {
   color: #00B7FF;
 }
+
 

@@ -4,19 +4,27 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')    
   nav
-    block navbar
+    .row.container
+      block navbar
   body
+    div.row.container  
     header
-      h3 Mi sitio
-    .container
-        img
-       .main-content
-         block content
-        .sidebar
-          block sidebar
+      .container
+        div.row.container
+          block fondo 1
+            a: img.fondo#id-fondo1(src="../public/images/paisaje1.jpg", alt="fondo1")
+          .main-content
+            block content
+          block fondo 2
+            img.fondo#id-fondo2(src="../public/images/paisaje2.jpg", alt="fondo2")
+          .sidebar
+            block sidebar
+          block fondo 3 
+            img.fondo#id-fondo3
     footer
-      p Fin de Mi pagina
-      span Copyright 
+      div.row.container
+        p Fin de Mi pagina
+        span Copyright 
 
 
     
