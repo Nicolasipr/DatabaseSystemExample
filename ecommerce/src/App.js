@@ -8,9 +8,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return (
-    
-    <body>
+    return <body>
         <div style={{ height: "500px", position: "relative" }}>
           <Layout style={{ background: "url(https://rayswearingen.files.wordpress.com/2011/08/hdr5.jpg) center / cover" }}>
             <Header scroll transparent title="Horizon Instruments" style={{ color: "grey" }}>
@@ -20,7 +18,8 @@ class App extends Component {
                 <Link to="/contacto">Contacto</Link>
               </Navigation>
             </Header>
-            <Drawer title="Horizon Instruments">
+            <Drawer>
+              <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo2" />
               <Navigation>
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
@@ -28,14 +27,12 @@ class App extends Component {
               </Navigation>
             </Drawer>
             <Content>
-                        <br></br>
-              <h1 style= {{color: 'white', textAlign: 'center'}}>Horizon Instruments </h1>
-
+              <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
             </Content>
           </Layout>
         </div>
-        <div class = "row container">
-          <br></br>
+        <div class="row container">
+          <br />
           <Content>
             <Main />
           </Content>
@@ -82,7 +79,7 @@ class App extends Component {
             </FooterLinkList>
           </FooterSection>
         </Footer>
-    </body>);
+      </body>;
       
 
   }
