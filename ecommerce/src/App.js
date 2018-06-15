@@ -31,8 +31,8 @@ class App extends Component {
             </Content>
           </Layout>
         </div>
-        <div>
-          <Content>
+        <div class="row container" >
+          < Content class = "row container" >
             <Main />
           </Content>
         </div>
