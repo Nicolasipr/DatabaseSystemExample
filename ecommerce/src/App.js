@@ -8,7 +8,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return <body>
+    return <div>
         <div style={{ height: "500px", position: "relative" }}>
           <Layout style={{ background: "url(https://rayswearingen.files.wordpress.com/2011/08/hdr5.jpg) center / cover" }}>
             <Header scroll transparent title="Horizon Instruments" style={{ color: "grey" }}>
@@ -31,8 +31,7 @@ class App extends Component {
             </Content>
           </Layout>
         </div>
-        <div class="row container">
-          <br />
+        <div>
           <Content>
             <Main />
           </Content>
@@ -79,7 +78,7 @@ class App extends Component {
             </FooterLinkList>
           </FooterSection>
         </Footer>
-      </body>;
+      </div>;
       
 
   }

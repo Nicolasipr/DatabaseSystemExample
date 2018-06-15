@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import SimpleMap from "./map.js" ;
 
-class Contacto extends Component {
-  render() {
-    return [
-      <div>
-        <h1>Contacto</h1>
-      </div>
-    ];
-  }
-}
 
-export default Contacto;
+
+export default class Contacto extends Component {
+   render(){
+      return(
+        <html>
+           <div>              
+              <SimpleMap/>       
+           </div>
+          </html>
+      )
+   }
+};
+
