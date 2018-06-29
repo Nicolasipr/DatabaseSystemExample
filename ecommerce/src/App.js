@@ -4,23 +4,27 @@ import { Layout, Header, Navigation, Drawer, Content,
 import {Link} from 'react-router-dom';
 import Main from './components/main';
 
+
 import './App.css';
 
 class App extends Component {
   render() {
     return <div>
-        <div style={{ height: "500px", position: "relative" }}>
+        <div style={{ height: "400px", position: "relative" }}>
           <Layout style={{ background: "url(https://rayswearingen.files.wordpress.com/2011/08/hdr5.jpg) center / cover" }}>
             <Header scroll transparent title="Horizon Instruments" style={{ color: "grey" }}>
               <Navigation>
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
                 <Link to="/contacto">Contacto</Link>
+                <Link to="/">Iniciar Sesion </Link>
+               
               </Navigation>
             </Header>
             <Drawer>
               <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo2" />
               <Navigation>
+                <Link to="/">Iniciar Sesion</Link>
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
                 <Link to="/contacto">Contacto</Link>
