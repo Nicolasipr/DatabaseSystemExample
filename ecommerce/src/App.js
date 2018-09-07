@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Header, Navigation, Drawer, Content,
+import { Layout, Header, Navigation, Content,
           Footer,FooterSection, FooterDropDownSection, FooterLinkList } from 'react-mdl';
 import {Link} from 'react-router-dom';
 import Main from './components/main';
@@ -17,19 +17,10 @@ class App extends Component {
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
                 <Link to="/contacto">Contacto</Link>
-                <Link to="/">Iniciar Sesion </Link>
+                <Link to="/login">Iniciar Sesion </Link>
                
               </Navigation>
             </Header>
-            <Drawer>
-              <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo2" />
-              <Navigation>
-                <Link to="/">Iniciar Sesion</Link>
-                <Link to="/">Inicio</Link>
-                <Link to="/productos">Productos</Link>
-                <Link to="/contacto">Contacto</Link>
-              </Navigation>
-            </Drawer>
             <Content>
               <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
             </Content>
