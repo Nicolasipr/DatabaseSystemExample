@@ -1,18 +1,27 @@
-var mysql = require("mysql");
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "nodeDbExample"
-});
 
-con.connect(function(err) {
-  if (err) {
-    console.log("Error connecting to Db");
-    return;
-  }
-  console.log("Connection established");
-});
+      const mysql = require("mysql");
 
-//  CON ESTO CREAS LA BASE DE DATOS, TIENES QUE ABRIR LA RUTA localhost:3000/hola PARA EJECUTAR 
+    
+
+      //  CONNECIÓN A LA BASE DE DATOS
+
+      const connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "",
+        database: "nodeDbExample"
+      });
+
+      connection.connect(function (err) {
+        if (err) {
+          console.log("Error connecting to Db");
+          return;
+        }
+        console.log("Connection established");
+      });
+
+   
+
+      connection.end();
+ 

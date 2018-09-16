@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-// import { Button } from 'react-bootstrap';
 import { Textfield, Button }from 'react-mdl'
-// import './login.css';
+import {Link} from 'react-router-dom';
 
 
 class Login extends Component {
@@ -42,7 +41,7 @@ class Login extends Component {
                 ¿No tienes cuenta? Puedes registrarte aquí. 
                 </div>
               <div class="mdl-card__actions">
-                        <Button raised ripple onClick={() => {console.log("Logging in"); } }>Registrarse</Button>
+                        <Button raised ripple onClick={() => {console.log("Logging in"); } }> <Link to="/register"></Link>Registrarse</Button>
                   </div>
                
               </div>
