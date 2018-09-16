@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Header, Navigation, Drawer, Content,
+import { Header, Navigation,Content,
           Footer,FooterSection, FooterDropDownSection, FooterLinkList } from 'react-mdl';
 import {Link} from 'react-router-dom';
 import Main from './components/main';
@@ -9,43 +9,33 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return <div>
-        <div style={{ height: "400px", position: "relative" }}>
-          <Layout style={{ background: "url(https://rayswearingen.files.wordpress.com/2011/08/hdr5.jpg) center / cover" }}>
-            <Header scroll transparent title="Horizon Instruments" style={{ color: "grey" }}>
-              <Navigation>
+    return  [(<div>
+        
+          <Header class="mdl-layout__header mdl-layout__header--scroll"style={{background:"#795548"}}>
+              <span  to="/"  >Horizon Instruments</span>
+              <div class="mdl-layout-spacer"></div>
+              <Navigation class="mdl-navigation" style={{background:"#795548"}} >
+                
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
                 <Link to="/contacto">Contacto</Link>
-                <Link to="/">Iniciar Sesion </Link>
+                <Link to="/login">Iniciar Sesion </Link>
                
               </Navigation>
-            </Header>
-            <Drawer>
-              <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo2" />
-              <Navigation>
-                <Link to="/">Iniciar Sesion</Link>
-                <Link to="/">Inicio</Link>
-                <Link to="/productos">Productos</Link>
-                <Link to="/contacto">Contacto</Link>
-              </Navigation>
-            </Drawer>
-            <Content>
-              <img src={require("./img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
-            </Content>
-          </Layout>
-        </div>
-        <div class="row container" >
-          < Content class = "row container" >
+         
+          </Header>
+          
+          < Content class = "row container" style={{minHeight: "60vh"}}>
             <Main />
           </Content>
-        </div>
-        <div class="row container" />
-        <Footer size="mega">
+
+        
+        <div class="row container" >
+        <Footer size="mega" >
           <FooterSection type="middle">
             <FooterDropDownSection title="Horizon Instruments">
               <FooterLinkList>
-                <Link to="/">bout</Link>
+                <Link to="/">About</Link>
                 <Link to="/">Terms</Link>
                 <Link to="/">Prtners</Link>
                 <Link to="/">Updtes</Link>
@@ -82,10 +72,12 @@ class App extends Component {
             </FooterLinkList>
           </FooterSection>
         </Footer>
-      </div>;
-      
+        </div>
+      </div>)];
+    }
 
-  }
 }
+
+
 
 export default App;
