@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { Textfield, Button }from 'react-mdl'
 import {Link} from 'react-router-dom';
+import Icon from '@material-ui/icons'
+import {account_circle } from '@material-ui/icons'
 
 
 class Login extends Component {
   render() {
     return ([ 
-      <div class="row container" style={{background: "#d7ccc8"}}>  
+      <div class="row container"  style={{minHeight: "60vh"}}>  
+      <div class="mdl-layout-spacer"></div>
         <div class="mdl-grid" style={{justifyContent: "center" }}>
           <div class="mdl-layout-spacer"></div>
 
           <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col" style = {{width: 400,
-            height: 500}}>
+            height: 400}}>
                 <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">Log-in</h2>
+                
+              <h2 style={{textAlign: "center", margin: "0 auto"}} class="mdl-card__title-text">Log-in</h2>
             </div>
               <div class="mdl-card__supporting-text">
                 Si eres usuario registrado puedes iniciar sesión aquí
@@ -23,7 +27,7 @@ class Login extends Component {
               <Textfield
                     onChange={() => {}}
                     label="Usuario"
-                    style={{width: '300px'}}
+                    style={{width: '480px'}}
                 />
                 <div class="mdl-layout-spacer"></div>
 
@@ -31,7 +35,7 @@ class Login extends Component {
                     onChange={() => {}}
                     type="password"
                     label="Contraseña "
-                    style={{width: '300px'}}
+                    style={{width: '480px'}}
                 />
                  <div class="mdl-card__actions">
                         <Button>Recuperar Contraseña</Button>
@@ -41,7 +45,7 @@ class Login extends Component {
                 ¿No tienes cuenta? Puedes registrarte aquí. 
                 </div>
               <div class="mdl-card__actions">
-                        <Button raised ripple onClick={() => {console.log("Logging in"); } }> <Link to="/register"></Link>Registrarse</Button>
+                        <Button style={{width: '300px'}} raised ripple onClick={() => {console.log("Logging in"); } }> <Link to="/register"></Link>Registrarse</Button>
                   </div>
                
               </div>

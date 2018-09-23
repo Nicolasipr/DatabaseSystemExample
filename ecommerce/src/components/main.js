@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import LandingPage from './landingpage';
 import Contacto from './contacto';
 import Productos from './productos';
+import addProducto from './addProduct';
 import SimpleMap from './map';
 import Login from './login';
 import Register from './register';
@@ -13,6 +14,7 @@ const Main = () => (
     <Route exact path="/" component={LandingPage} />
     <Route path="/contacto" component={Contacto} />
     <Route path="/productos" component={Productos} />
+    <Route path="/productos/add" component={addProducto} />
     <Route path="/mapa" component={SimpleMap}/>
     <Route path="/login" component={Login}/>
     <Route path="/register" component={Register}/>

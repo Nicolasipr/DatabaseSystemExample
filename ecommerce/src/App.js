@@ -13,10 +13,10 @@ class App extends Component {
   render() {
     return  [(<div>
         
-          <Header class="mdl-layout__header mdl-layout__header--scroll"style={{background:"#795548"}}>
+          <Header class="mdl-layout__header mdl-layout__header--scroll"style={{background:"#8d6e63"}}>
               <span  to="/"  >Horizon Instruments</span>
               <div class="mdl-layout-spacer"></div>
-              <Navigation class="mdl-navigation" style={{background:"#795548"}} >
+              <Navigation class="mdl-navigation" style={{background:"#8d6e63"}} >
                 
                 <Link to="/">Inicio</Link>
                 <Link to="/productos">Productos</Link>
@@ -27,7 +27,7 @@ class App extends Component {
          
           </Header>
           
-          < Content class = "row container" style={{minHeight: "60vh"}}>
+          < Content class = "row container">
             <Main />
           </Content>
 

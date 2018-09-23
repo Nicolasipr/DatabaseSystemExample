@@ -33,14 +33,8 @@ const MyMapComponent = compose(
 export default class Contacto extends Component {
    render(){
       return(
-        <div>
-           <div>              
+        <div>          
               <MyMapComponent  isMarkerShown/>
-           </div>
-           <div class=" row container">
-              <h1 style={{textAling:"center"}}> Contacto</h1>
-              <p>Aqui va la informacion de contacto y todas esas cosas</p>
-            </div>
           </div>
       )
    }

@@ -1,25 +1,29 @@
 import React, { Component } from "react";
-import {Content} from 'react-mdl';
+import {Layout} from 'react-mdl';
 
+import './CSS/ladingpage.css'
 
 class LandingPage extends Component {
   render() {
     return [(<div class="row container">
-        <div style={{position:"relative"}}>
-          <div style={{ background: "url(https://rayswearingen.files.wordpress.com/2011/08/hdr5.jpg) center / cover", height: 450 }}>
-            <Content>
-              <img src={require("../img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" class="center" style={{height:"100px"}}/>
-            </Content>
-          </div>
-        </div>
-        
-          <div>
-        <h1 style = {{textAlign: 'center', color: 'Black'}} >Horizon Instruments</h1>
-          </div>
-            {/* <Content>
-              <img src={require("../img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
-            </Content> */}
-    </div>)];
+              
+                <div class= "row container">
+                
+                    <Layout src={require("../img/landscape2.jpg")} alt="Horizon Instruments" class="heroImage">
+                      <h3  style = {{textAlign: 'center', color: '#eeeeee', margin: "auto"}}>HORIZON INSTRUMENTS</h3>
+                    </Layout> 
+                   
+                  
+                </div>
+              
+              
+                <div>
+             
+                </div>
+                  {/* <Content>
+                    <img src={require("../img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
+                  </Content> */}
+          </div>)];
 
   }
 }
