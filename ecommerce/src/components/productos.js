@@ -34,16 +34,16 @@ class Productos extends  Component {
         .catch(err => console.error(err))
     }
 
-    renderProduct = ({id_articulo, nombre_articulo, precio}) => <div 
-                        shadow={0} style={{width: '256px', height: '256px'}}
+    renderProduct = ({id_articulo, nombre_articulo, precio}) => <tr 
+                        shadow={0} style={{width: '300px', height: '300px'}}
                         key={id_articulo} 
                         class = "mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" >
-                        <h1>
+                        <th>
                             {nombre_articulo}
-                        </h1>
-
-                        ${precio}
-                        </div>
+                        </th>
+                        <div style={{ width: '200px', height: '200px', textAlign: 'center', margin:"auto",background: 'url( http://www.audiomusica.com/catalogo/media/catalog/product/cache/1/small_image/190x190/9df78eab33525d08d6e5fb8d27136e95/2/0/209290.jpg) center / cover'}}/>
+                        <div style={{textAlign: "center"}}>${precio}</div>   
+                        </tr>
                     
    
 
@@ -53,39 +53,15 @@ class Productos extends  Component {
     
         
         return(
-            [<div class="row container">
-                <h1 cstyle={{margin:"auto"}}>Productos</h1>
-                
-                    <div class="mdl-android-card-container mdl-grid">
+            [<div class="row container" style={{justifyContent:"center"}}>
 
-                    </div>{products.map(this.renderProduct)}
-                
-                
-            
-                
-        {/* <div>
-            <h2> Agregar Productos</h2>
-          <input 
-                    value={product.id_articulo} 
-                    onChange={ e => this.setState({ product: { ...product, id_articulo: e.target.value }})}/>
-           <input 
-                    value={product.id_compania} 
-                    onChange={ e=> this.setState({ product: { ...product, id_compania: e.target.value}})}/>
-          <input 
-                    value={product.id_categoria} 
-                    onChange={ e=> this.setState({ product: { ...product, id_categoria: e.target.value}})}/>
-          <input 
-                    value={product.nombre_articulo} 
-                    onChange={ e=> this.setState({ product: { ...product, nombre_articulo: e.target.value}})}/>
-          <input 
-                    value={product.precio} 
-                    onChange={ e=> this.setState({ product: { ...product, precio: e.target.value}})}/>
-           <input 
-                    value={product.stock} 
-                    onChange={ e=> this.setState({ product: { ...product, stock: e.target.value}})}/>
-          <button onClick={this.addProduct}>Add Product</button>
-        </div> */}
-           
+                <h1  style={{ textAlign: 'center', margin:"auto"}}>Productos</h1>
+                    <tr>
+                        <div class="mdl-android-card-container mdl-grid" style={{justifyContent: "center"}}>
+                            {products.map(this.renderProduct)}
+                        </div> 
+                    </tr>
+                               
             </div>]
         )
     }
