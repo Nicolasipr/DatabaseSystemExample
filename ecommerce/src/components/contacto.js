@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton} from "react-mdl";
 import { compose, withProps } from "recompose";
 import {
   withScriptjs,
@@ -6,6 +7,7 @@ import {
   GoogleMap,
   Marker
 } from "react-google-maps";
+
 
 
 const MyMapComponent = compose(
@@ -32,11 +34,25 @@ const MyMapComponent = compose(
 
 export default class Contacto extends Component {
    render(){
-      return(
-        <div>          
+      return [(
+          <div>          
               <MyMapComponent  isMarkerShown/>
+
+              <Card shadow={0} style={{width: '800px', margin: 'auto', paddingTop:"-200"}}>
+                <CardTitle style={{color: 'Black', margin: "0 auto"}}>Escribenos</CardTitle>
+                <CardText>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris sagittis pellentesque lacus eleifend lacinia...
+                </CardText>
+                <CardActions border>
+                    <Button colored>Get Started</Button>
+                </CardActions>
+                <CardMenu style={{color: '#fff'}}>
+                    <IconButton name="share" />
+                </CardMenu>
+            </Card>
           </div>
-      )
+      )];
    }
 };
 

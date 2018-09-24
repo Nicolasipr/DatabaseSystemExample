@@ -12,17 +12,7 @@ class LandingPage extends Component {
                     <Layout src={require("../img/landscape2.jpg")} alt="Horizon Instruments" class="heroImage">
                       <h3  style = {{textAlign: 'center', color: '#eeeeee', margin: "auto"}}>HORIZON INSTRUMENTS</h3>
                     </Layout> 
-                   
-                  
                 </div>
-              
-              
-                <div>
-             
-                </div>
-                  {/* <Content>
-                    <img src={require("../img/logoHorizonInstruments.png")} alt="Horizon Instruments" className="logo" />
-                  </Content> */}
           </div>)];
 
   }
